@@ -1,0 +1,26 @@
+.MyCarousel-container {
+  margin-left: 2.5px;
+  max-width: 100%;
+}
+.MyCarousel-container:hover {
+  opacity: 0.98;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.MyCarousel-container .carousel-item {
+  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.MyCarousel-container .carousel-item img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  object-fit: cover;
+}

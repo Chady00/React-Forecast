@@ -1,0 +1,39 @@
+.cards-container {
+  width: 92%;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 20px;
+}
+.simple-card {
+  margin-top: 5px;
+  min-width: 200px !important;
+  width: 16.333% !important;
+  border: none !important;
+  border-radius: 0 !important;
+  position: relative;
+}
+
+.simple-card:hover {
+  opacity: 0.98;
+  transform: scale(1.022);
+  transition: all 0.3s ease-in-out;
+}
+.simple-card :nth-child(1) {
+  border-radius: 30px;
+}
+
+.simple-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  width: 1px;
+  border-left: 1px solid #e7e4e4;
+}
+.simple-card-header {
+  background: rgb(170, 228, 242);
+  color: rgb(7, 7, 68);
+}

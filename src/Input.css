@@ -1,0 +1,25 @@
+.container{
+ 
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input{
+    position:relative;
+   
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    margin: 10px;
+    width: 700px;
+    padding: 15px;
+    border:1px solid rgb(237, 251, 255);
+    border-radius: 30px;
+    font-size: 16px;
+}
