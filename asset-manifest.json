@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Forecast/static/css/main.005bd6cd.css",
+    "main.js": "/React-Forecast/static/js/main.d1318faa.js",
+    "static/js/787.28cb0dcd.chunk.js": "/React-Forecast/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/React-Forecast/index.html",
+    "main.005bd6cd.css.map": "/React-Forecast/static/css/main.005bd6cd.css.map",
+    "main.d1318faa.js.map": "/React-Forecast/static/js/main.d1318faa.js.map",
+    "787.28cb0dcd.chunk.js.map": "/React-Forecast/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.005bd6cd.css",
+    "static/js/main.d1318faa.js"
+  ]
+}
