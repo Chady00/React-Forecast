@@ -18,4 +18,4 @@ It uses the OpenWeatherMap API to retrieve data based on the provided latitude a
 ![image](https://user-images.githubusercontent.com/84717550/219749898-e2a14723-d82b-4f29-bb8e-32bf411de887.png)
 
 
-The components return a div containers that hold multiple cards, each displaying the weather forecast for a different day. The card header shows the day of the week, and the body displays the weather description, weather icon, and the minimum and maximum temperature.
+The components return a div container that hold multiple cards, each displaying the weather forecast for a different day. The card header shows the day of the week, and the body displays the weather description, weather icon, and the minimum and maximum temperature.
