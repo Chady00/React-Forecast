@@ -7,7 +7,7 @@ import "./Input.css";
 import MyCard from "./MyCard";
 import MyCarousel from "./MyCarousel";
 import MyTable from "./MyTable";
-import { ThreeDots } from "react-loader-spinner";
+import { ClipLoader } from "react-spinners";
 
 function Home() {
   const apiKey = "42a77eb18d462ab5e0d7e807ee2f659f";
@@ -26,7 +26,17 @@ function Home() {
         }
       });
   };
-
+  function updateCity(lat, lon) {
+    console.log("Latitude:", lat, "Longitude:", lon);
+    fetch(
+      `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${apiKey}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setCity(data[0].name);
+        //call get weather function
+      });
+  }
   return (
     <>
       {typeof weather.main === "undefined" ? (
@@ -38,6 +48,7 @@ function Home() {
             value={city}
             onKeyPress={getWeather}
           ></input>
+          <ClipLoader color="#36d7b7" />
         </div>
       ) : (
         <body
@@ -147,6 +158,7 @@ function Home() {
                         <WeatherMap
                           lon={weather.coord.lon}
                           lat={weather.coord.lat}
+                          updateCity={updateCity}
                         />
                       </div>
                     </div>

@@ -19,6 +19,7 @@ function MyCard(props) {
     getData();
   }, []);
 
+  console.log(CardData);
   return (
     <>
       <div className="cards-container">
@@ -54,8 +55,9 @@ function MyCard(props) {
                     <img
                       className="card-icon"
                       src={`http://openweathermap.org/img/w/${item.weather[0].icon}.png`}
-                      alt="weather icon"
+                      alt=""
                     />
+                    {console.log(item.weather[0].icon)}
                     {item.weather[0].description.charAt(0).toUpperCase() +
                       item.weather[0].description.slice(1)}
                   </Card.Title>
