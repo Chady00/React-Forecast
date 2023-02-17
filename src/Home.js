@@ -7,12 +7,14 @@ import "./Input.css";
 import MyCard from "./MyCard";
 import MyCarousel from "./MyCarousel";
 import MyTable from "./MyTable";
-import { ClipLoader } from "react-spinners";
+import { PuffLoader } from "react-spinners";
+import MyStars from "./MyStars";
 
 function Home() {
   const apiKey = "42a77eb18d462ab5e0d7e807ee2f659f";
   const [weather, setWeather] = useState({});
   const [city, setCity] = useState("");
+  const [foundLocation, setFoundLocation] = useState(true);
 
   const getWeather = (event) => {
     fetch(
@@ -25,6 +27,18 @@ function Home() {
           setCity("");
         }
       });
+    console.log("weather is" + weather);
+    console.log(weather.cod);
+    //check if dat is valid
+    if (
+      weather.cod === "404" ||
+      weather.cod === "400" ||
+      weather.cod == "undefined"
+    ) {
+      setFoundLocation(false);
+    } else {
+      setFoundLocation(true);
+    }
   };
   function updateCity(lat, lon) {
     console.log("Latitude:", lat, "Longitude:", lon);
@@ -39,42 +53,32 @@ function Home() {
   }
   return (
     <>
+      <MyStars />
       {typeof weather.main === "undefined" ? (
-        <body
-          style={{
-            backgroundColor: "#140941",
-            backgroundSize: "100%",
-            zIndex: -1,
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            height: "100vh",
-          }}
-        >
-          <div className="container">
-            <input
-              className="input"
-              placeholder="Enter Location..."
-              onChange={(e) => setCity(e.target.value)}
-              value={city}
-              onKeyPress={getWeather}
-            ></input>
-            <ClipLoader color="#36d7b7" />
-          </div>
-        </body>
+        <div className="container">
+          <input
+            className="input"
+            placeholder="Enter a city..."
+            onChange={(e) => setCity(e.target.value)}
+            value={city}
+            onKeyPress={getWeather}
+          ></input>
+          <PuffLoader color="white" />
+          {weather.cod === "404" || weather.cod === "400" ? (
+            <p
+              style={{
+                color: "#bbc4df",
+                fontSize: "20px",
+                fontFamily: "sans-serif",
+              }}
+            >
+              ...Location was not found...
+            </p>
+          ) : null}
+        </div>
       ) : (
-        <body
-          style={{
-            // backgroundImage: `url("https://source.unsplash.com/1500x900/?${city} ${weather.weather[0].description}")`,
-            background: "#140941",
-            backgroundSize: "100%",
-            zIndex: -1,
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            height: "100vh",
-          }}
-        >
+        <div>
           <div className="container">
-            {/* <img className="logo" src={logo} alt="logo" /> */}
             <input
               className="input"
               placeholder="Enter Location..."
@@ -83,7 +87,7 @@ function Home() {
               onKeyPress={getWeather}
             ></input>
           </div>
-          <div className="main-container">
+          <div className="main-container" style={{ marginBottom: "60px" }}>
             <div
               className="left-container"
               style={{
@@ -203,7 +207,7 @@ function Home() {
             </div>
             <MyCard lon={weather.coord.lon} lat={weather.coord.lat} />
           </div>
-        </body>
+        </div>
       )}
     </>
   );

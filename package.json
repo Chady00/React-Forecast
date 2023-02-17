@@ -15,7 +15,6 @@
     "react-leaflet": "^4.2.0",
     "react-loader-spinner": "^5.3.4",
     "react-loading-dot": "^1.0.6",
-    "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
     "web-vitals": "^2.1.4"
   },
@@ -47,6 +46,8 @@
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.0",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "node-sass": "^7.0.3",
+    "react-scripts": "^5.0.1"
   }
 }

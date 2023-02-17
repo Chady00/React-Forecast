@@ -25,7 +25,7 @@ function MyTable(props) {
       <div style={{ height: "100%" }}>
         {CardData2.length !== 0 && (
           <Table responsive="sm" style={{ height: "100%" }}>
-            <thead>
+            <thead style={{ height: "77px" }}>
               <tr>
                 <th></th>
                 <th>Feels Like</th>
@@ -44,13 +44,6 @@ function MyTable(props) {
                 <td>{CardData2[0].main["sea_level"]}</td>
                 <td>{CardData2[0].main["humidity"]}</td>
               </tr>
-
-              <td>.</td>
-              <td>.</td>
-              <td>.</td>
-              <td>.</td>
-              <td>.</td>
-              <td>.</td>
             </tbody>
           </Table>
         )}
