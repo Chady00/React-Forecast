@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# React-Forecast
+Technologies Used : 
+* Tailwind
+* React-LeafLet
+* OpenWeatherApi
+* Unsplash Api
+* React-Bootstrap
+* React-spinners
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A react website that displays weather information for a given location.
+The components use the OpenWeatherMap API to fetch weather data based on the location entered by the user. The home page contains a form input where the user can enter the location, and when the user presses the enter key, the weather data is fetched and displayed on the screen. The Home-Component uses the useState and useEffect hooks to manage the state of the application, and the data is displayed using several components, including MyCard, MyCarousel, and MyTable.
 
-## Available Scripts
+![image](https://user-images.githubusercontent.com/84717550/219749710-4ee10aa3-63c6-4e75-a0ac-caf8cb9c89e8.png)
 
-In the project directory, you can run:
+The component also uses the react-leaflet library to display a map of the location.
+It uses the OpenWeatherMap API to retrieve data based on the provided latitude and longitude values. The component state is managed using the useState hook, and the useEffect hook is used to fetch the data when the component is mounted. The getData function makes the API call and sets the response data to the component state.
 
-### `npm start`
+![image](https://user-images.githubusercontent.com/84717550/219749898-e2a14723-d82b-4f29-bb8e-32bf411de887.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The components return a div containers that hold multiple cards, each displaying the weather forecast for a different day. The card header shows the day of the week, and the body displays the weather description, weather icon, and the minimum and maximum temperature.
