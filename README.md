@@ -19,3 +19,5 @@ It uses the OpenWeatherMap API to retrieve data based on the provided latitude a
 
 
 The components return a div container that hold multiple cards, each displaying the weather forecast for a different day. The card header shows the day of the week, and the body displays the weather description, weather icon, and the minimum and maximum temperature.
+
+Please note that the API key used in this project is not protected because there is no backend involved. The key is public and can be accessed by anyone who has access to the source code. It is recommended to protect your API keys when working with backends to avoid unauthorized access to your services.
