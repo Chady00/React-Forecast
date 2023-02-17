@@ -40,21 +40,34 @@ function Home() {
   return (
     <>
       {typeof weather.main === "undefined" ? (
-        <div className="container">
-          <input
-            className="input"
-            placeholder="Enter Location..."
-            onChange={(e) => setCity(e.target.value)}
-            value={city}
-            onKeyPress={getWeather}
-          ></input>
-          <ClipLoader color="#36d7b7" />
-        </div>
+        <body
+          style={{
+            backgroundColor: "#140941",
+            backgroundSize: "100%",
+            zIndex: -1,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "100vh",
+          }}
+        >
+          <div className="container">
+            <input
+              className="input"
+              placeholder="Enter Location..."
+              onChange={(e) => setCity(e.target.value)}
+              value={city}
+              onKeyPress={getWeather}
+            ></input>
+            <ClipLoader color="#36d7b7" />
+          </div>
+        </body>
       ) : (
         <body
           style={{
-            backgroundImage: `url("https://source.unsplash.com/1500x900/?${city} ${weather.weather[0].description}")`,
+            // backgroundImage: `url("https://source.unsplash.com/1500x900/?${city} ${weather.weather[0].description}")`,
+            background: "#140941",
             backgroundSize: "100%",
+            zIndex: -1,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             height: "100vh",
